@@ -4,6 +4,7 @@ public class GameFrame extends JFrame {
 	
 	//cosntructor for the gameframe class
 	GameFrame(){
+		
 		this.add(new GamePanel());
 		this.setTitle("Snake");
 		//to close the program with the x button
