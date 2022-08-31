@@ -78,7 +78,26 @@ public class GamePanel extends JPanel implements ActionListener{
 	
 	//method to move
 	public void move() {
+		for (int i= bodyParts; i>0; i--) {
+			x[i] = x[i-1]; //shifting all the coordinates in this array over by one spot 
+			y[i] = y[i-1];
+		}
 		
+		//creating a case in each possible directions (R, L, U, D)
+		switch (direction) {
+		case 'U':
+			y[0] = y[0] - UNIT_SIZE;
+			break;
+		case 'D':
+			y[0] = y[0] + UNIT_SIZE;
+			break;
+		case 'L':
+			x[0] = x[0] - UNIT_SIZE;
+			break;
+		case 'R':
+			x[0] = x[0] + UNIT_SIZE;
+			break;
+		}
 		
 	}
 	
