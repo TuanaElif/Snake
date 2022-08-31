@@ -127,10 +127,22 @@ public class GamePanel extends JPanel implements ActionListener{
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
+
+		//to move our snake
+		if(running) {
+			move();
+			checkApple();
+			checkCollisions();
+		}
+		repaint();
 		
 	}
 	
+	private void checkApple() {
+		// TODO Auto-generated method stub
+		
+	}
+
 	//inner class
 	public class MyKeyAdapter extends KeyAdapter{
 		@Override
