@@ -117,7 +117,7 @@ public class GamePanel extends JPanel implements ActionListener{
 	
 	//method to see if the snake eats the apple
 	public void checkCollisions() {
-		//checks ifhead of the snake collides with the body
+		//checks if head of the snake collides with the body
 		//iterate through all of the body parts of the snake
 		for (int i= bodyParts; i>0; i--) {
 			if((x[0] == x[i]) && (y[0] == y[i])) {
@@ -182,6 +182,8 @@ public class GamePanel extends JPanel implements ActionListener{
 		public void keyPressed(KeyEvent e) {
 			
 		}
+		
+		//learn these codes by hard
 	}
 
 }
