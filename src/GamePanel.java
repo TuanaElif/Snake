@@ -11,7 +11,7 @@ public class GamePanel extends JPanel implements ActionListener{
 	//to specify how big we want our objects to be
 	static final int UNIT_SIZE = 25;
 	//how many objects we want to fit on it
-	static final int GAME_UNITS = (SCREEN_WIDTH *SCREEN_HEIGHT)/UNIT_SIZE;
+	static final int GAME_UNITS = (SCREEN_WIDTH *SCREEN_HEIGHT)/(UNIT_SIZE);
 	//specify delay for the time
 	//the higherthe number for the delay the slower the game will be
 	static final int DELAY = 75;
@@ -180,7 +180,34 @@ public class GamePanel extends JPanel implements ActionListener{
 	public class MyKeyAdapter extends KeyAdapter{
 		@Override
 		public void keyPressed(KeyEvent e) {
-			
+			//creating a switch that is going to examine the e key event
+			switch(e.getKeyCode()) {
+			case KeyEvent.VK_LEFT:
+			//check to see if the direction goes to left
+				if(direction != 'R') {
+					//if true then the direction is on the left
+					direction = 'L';
+				}
+				break;
+			case KeyEvent.VK_RIGHT:
+				//vice versa
+				if (direction != 'L') {
+					direction = 'R';
+				}
+				break;
+			case KeyEvent.VK_UP:
+				//vice versa
+				if (direction != 'D') {
+					direction = 'U';
+				}
+				break;
+			case KeyEvent.VK_DOWN:
+				//vice versa
+				if (direction != 'U') {
+					direction = 'D';
+				}
+				break;
+			}
 		}
 		
 		//learn these codes by hard
